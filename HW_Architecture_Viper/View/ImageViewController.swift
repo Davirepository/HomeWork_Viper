@@ -36,7 +36,9 @@ class ImageViewController: UIViewController, ImagePresenterOutput {
     
     func showLoadImage(image: UIImage) {
         picture.backgroundColor = nil
-        picture.image = image
+        DispatchQueue.main.async {
+            self.picture.image = image
+        }
     }
     
     func showViewAlerController(error: String) {
