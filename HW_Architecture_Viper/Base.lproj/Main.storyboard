@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="HW_Architecture_Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wns-ea-v69">
+                                <rect key="frame" x="87" y="94" width="240" height="240"/>
+                                <color key="backgroundColor" red="0.3743922247" green="0.72248306210000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="UmP-mr-waN"/>
+                                    <constraint firstAttribute="width" constant="240" id="zZ0-Sv-62u"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PQm-RU-1de">
+                                <rect key="frame" x="87" y="371" width="240" height="190"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upn-di-ZgD">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8eR-mK-jSe"/>
+                                        </constraints>
+                                        <state key="normal" title="Отобразить">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70b-RI-93k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbv-jC-gK3">
+                                        <rect key="frame" x="0.0" y="70" width="240" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mth-5C-cwX"/>
+                                        </constraints>
+                                        <state key="normal" title="Скачать">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mni-ZK-Aj9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56v-dV-w7E">
+                                        <rect key="frame" x="0.0" y="140" width="240" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3YX-99-y6K"/>
+                                        </constraints>
+                                        <state key="normal" title="Очистить кэш">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clean:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNy-mn-76N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="vMl-ja-gm3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PQm-RU-1de" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fly-B4-Vnr"/>
+                            <constraint firstItem="Wns-ea-v69" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IUG-Z5-9hG"/>
+                            <constraint firstItem="Wns-ea-v69" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Shd-eA-wsB"/>
+                            <constraint firstItem="PQm-RU-1de" firstAttribute="top" secondItem="Wns-ea-v69" secondAttribute="bottom" constant="37" id="XS3-hT-QbC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="picture" destination="Wns-ea-v69" id="Wag-v1-pzN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>
